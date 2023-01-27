@@ -7,12 +7,12 @@ def triangulos(ladoA,ladoB,ladoC):
     difBC = ladoB - ladoC
     difAC = ladoA - ladoC
     lista = [difAB,difBC,difAC]
+    #transformação em módulo
     n = 0
     while n < len(lista):
         if lista[n]<0:
             lista[n]*=-1
         n+=1
-    print(lista)
     if ladoA > difBC and ladoB > difAC and ladoC > difAB:
         #próxima verificação é se a soma de dois lados é maior que o outro lado: 
         if ladoA + ladoB > ladoC and ladoA + ladoC > ladoB and ladoB + ladoC > ladoA:  
@@ -35,4 +35,4 @@ l3 = float(input('Informe o terceiro lado: '))
 if l1 > 0 and l2 > 0 and l3 > 0:
     triangulos(l1,l2,l3)
 else:
-    print('Os lados de um triângulo devem ser positivos!')
+    print('Todos os lados de um triângulo devem ser positivos!')
