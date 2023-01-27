@@ -3,7 +3,6 @@ def fatorial(num):
         return 1
     else:
         return num * fatorial(num-1)
-
-        
+    
 print(fatorial(5))
         
